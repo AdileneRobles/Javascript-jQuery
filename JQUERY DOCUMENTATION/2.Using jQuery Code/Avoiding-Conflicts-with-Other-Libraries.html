@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="prototype.js"></script>
+    <script src="jquery.js"></script>
+
+<!--Putting jQuery Into No-Conflict Mode-->
+    <!--<script>
+ 
+        //var $j = jQuery.noConflict();
+        jQuery.noConflict();
+
+        // $j is now an alias to the jQuery function; creating the new alias is optional.
+        $j(document).ready(function() {
+            //$j( "div" ).hide();
+            // You can use the locally-scoped $ in here as an alias to jQuery.
+            $( "div" ).hide();
+        });
+ 
+        // The $ variable now has the prototype meaning, which is a shortcut for
+        // document.getElementById(). mainDiv below is a DOM element, not a jQuery object.
+       // The $ variable in the global scope has the prototype.js meaning.
+       window.onload = function() {
+            var mainDiv = $( "main" );
+        }
+ 
+    </script>-->
+
+
+    
+<!--Including jQuery Before Other Libraries-->
+    <!--<script>
+ 
+        // Use full jQuery function name to reference jQuery.
+        jQuery( document ).ready(function() {
+            jQuery( "div" ).hide();
+        });
+ 
+        // Use the $ variable as defined in prototype.js
+        window.onload = function() {
+            var mainDiv = $( "main" );
+        };
+ 
+    </script>-->
+
+
+
+<!--Summary of Ways to Reference the jQuery Function-->
+    <!--linkCreate a New Alias-->
+        <!--<script>
+ 
+            // Give $ back to prototype.js; create new alias to jQuery.
+            var $jq = jQuery.noConflict();
+         
+        </script>-->
+
+    <!--linkUse an Immediately Invoked Function Expression-->
+        <!-- Using the $ inside an immediately-invoked function expression. -->
+        <!--<script>
+ 
+            jQuery.noConflict();
+ 
+                (function( $ ) {
+                    // Your jQuery code here, using the $
+                })( jQuery );
+ 
+        </script>-->
+
+    <!--Use the Argument That's Passed to the jQuery( document ).ready() Function-->
+        <!--<script>
+     
+            jQuery(document).ready(function( $ ) {
+            // Your jQuery code here, using $ to refer to jQuery.
+            });
+     
+        </script>-->
+
+        <script>
+     
+            jQuery(function($){
+                // Your jQuery code here, using the $
+            });
+     
+        </script>
+
+</head>
+<body>
+</body>
+</html>
